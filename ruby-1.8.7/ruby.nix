@@ -36,7 +36,7 @@ let
       src = if useRailsExpress then fetchFromGitHub {
           owner  = "ruby";
           repo   = "ruby";
-          rev    = builtins.replaceStrings ["." "-p"] ["_" "_"] version;
+          rev    = builtins.replaceStrings ["." "-p"] ["_" "_"] "v${version}";
           sha256 = "1xddhxr0j26hpxfixvhqdscwk2ri846w2129fcfwfjzvy19igswx";
       } else fetchurl {
         url = "http://cache.ruby-lang.org/pub/ruby/1.8/ruby-${version}.tar.gz";
